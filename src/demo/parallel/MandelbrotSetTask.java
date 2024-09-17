@@ -288,8 +288,8 @@ class MandelbrotSetTask extends Task<Long> {
      * @return calculated color of the pixel
      */
     private Color calcPixel(double x, double y) {
-        double re = (minR * (width - x) + x * maxR) / width;
-        double im = (minI * (height - y) + y * maxI) / height;
+        double re = (maxR * (height - x) + x * minR) / height;
+        double im = (maxI * (width - y) + y * minI) / width;
         Complex calPixel = new Complex(re, im);
         return getColor(calc(calPixel));
     }
