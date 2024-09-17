@@ -60,6 +60,11 @@ public class Complex {
         im = imag;
     }
 
+    public Complex Multiplicat(double val) {
+        re *= val;
+        im *= val;
+        return this;
+    }
     /**
      * Add operation.
      * @param b summand
